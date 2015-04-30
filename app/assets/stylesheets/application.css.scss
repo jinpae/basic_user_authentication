@@ -38,3 +38,21 @@ body {
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
+
+#flash-wrapper {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.85;
+  text-align: center;
+
+	button.close {
+		top: -0.5em;
+		right: -1.25em;
+	}
+	
+	p {
+		font-size: 1.2em;
+	}
+}

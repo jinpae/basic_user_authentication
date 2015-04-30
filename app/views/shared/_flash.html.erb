@@ -1,0 +1,8 @@
+<% flash.each do |type, message| %>
+	<div id="flash-wrapper" class="alert alert-<%= type %> alert-dismissible fade in" role="alert">
+		<button aria-label="close" data-dismiss="alert" type="button" class="close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+		<%= content_tag :p, message %>
+	</div>
+<% end %>
