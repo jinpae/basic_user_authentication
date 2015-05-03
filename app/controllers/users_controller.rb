@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
 
 		if @user.save
-			session[:user_id] = @user.id
+			cookies[:auth_token] = @user.auth_token
 			redirect_to @user, success: "Your account has been created successfully!"
 		else
 			render :new
