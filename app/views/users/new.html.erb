@@ -3,18 +3,8 @@
 		<h2 class="form-title">Sign up</h2>
 	</header>
 
-	<% if @user.errors.any? %>
-		<div class="errors-wrapper">
-			<h4>
-				<%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:
-			</h4>
-			<ul>
-				<% @user.errors.full_messages.each do |message| %>
-					<li><%= message %></li>
-				<% end %>
-			</ul>
-		</div>
-	<% end%>
+	<%= render 'shared/errors', object: @user,
+		message: "prohibited this user from being saved:" %>
 
 	<%= form_for(@user) do |f| %>
 		<div class="form-group">
