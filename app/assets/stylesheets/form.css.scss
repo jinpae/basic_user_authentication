@@ -13,7 +13,14 @@
 	}
 }
 
-#error-wrapper {
+.form-group {
+	em {
+		font-weight: 100;
+		font-size: 1.3rem;
+	}
+}
+
+#errors-wrapper {
 	margin: 20px 0;
 }
 
