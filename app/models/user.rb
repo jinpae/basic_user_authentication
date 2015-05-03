@@ -11,6 +11,15 @@ class User < ActiveRecord::Base
 		user && user.authenticate(password)
 	end
 
+	def send_password_reset_instructions
+		generate_token(:password_reset_token)
+
+		UserMailer.password_reset_instructions(self)
+
+		self.password_reset_sent_at = Time.zone.now
+		save!
+	end
+
 	private
 		def generate_token(column)
 			begin

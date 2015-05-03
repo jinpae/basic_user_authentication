@@ -1,2 +1,22 @@
-<h1>Passwords#new</h1>
-<p>Find me in app/views/passwords/new.html.erb</p>
+<section id="form-wrapper">
+	<header class="form-title">
+		<h2>Forgot password?</h2>
+	</header>
+
+	<%= form_tag password_path do %>
+		<div class="form-group">
+			<%= label_tag :email, nil, class: "control-label" %>
+			<div>
+				<%= email_field_tag :email, params[:email], required: true, autofocus: true, class: "form-control" %>
+			</div>
+		</div>
+		<div class="form-group">
+			<div>
+				<%= submit_tag "Send me instructions", class: "btn btn-default" %>
+			</div>
+		</div>
+		<div class="form-group">
+			<%= link_to "Back to sign in page", sign_in_path %>
+		</div>
+	<% end %>
+</section>
