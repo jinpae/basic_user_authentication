@@ -17,6 +17,12 @@
 			</div>
 		</div>
 		<div class="form-group">
+			<div id="remember-me-wrapper">
+				<%= check_box_tag :remember_me, 1, params[:remember_me] %>
+				<span>Remember me</span>
+			</div>
+		</div>
+		<div class="form-group">
 			<div>
 				<%= submit_tag "Sign in", class: "btn btn-default" %>
 			</div>

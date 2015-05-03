@@ -31,3 +31,16 @@
 		border-color: #f78484;
 	}
 }
+
+#remember-me-wrapper {
+	position: relative;
+
+	input[type=checkbox] {
+		position: absolute;
+	}
+
+	span {
+		position: relative;
+		left: 20px;
+	}
+}
