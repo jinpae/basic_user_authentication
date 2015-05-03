@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+	get "sign_out" => "sessions#destroy"
+	get "sign_in" => "sessions#new"
   resource :session
 
 	get "sign_up" => "users#new"
