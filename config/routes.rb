@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+	get "sign_up" => "users#new"
   resources :users
 
 	# update the root url as needed
