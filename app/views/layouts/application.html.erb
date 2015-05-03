@@ -26,8 +26,15 @@
 							<%= nav_link_to "Home", root_path %>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-							<%= nav_link_to "Sign in", sign_in_path %>
-							<%= nav_link_to "Sign up", sign_up_path %>
+							<% if current_user %>
+								<p class="navbar-text">
+									<%= link_to "Signed in as #{current_user.name}", current_user %>
+								</p>
+								<%= nav_link_to "Sign out", sign_out_path %>
+							<% else %>
+								<%= nav_link_to "Sign in", sign_in_path %>
+								<%= nav_link_to "Sign up", sign_up_path %>
+							<% end %>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
