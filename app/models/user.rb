@@ -14,10 +14,14 @@ class User < ActiveRecord::Base
 	def send_password_reset_instructions
 		generate_token(:password_reset_token)
 
-		UserMailer.password_reset_instructions(self)
+		UserMailer.password_reset_instructions(self).deliver
 
 		self.password_reset_sent_at = Time.zone.now
 		save!
+	end
+
+	def has_valid_password_reset_token
+		password_reset_token && (password_reset_sent_at >= 2.hours.ago)
 	end
 
 	private
