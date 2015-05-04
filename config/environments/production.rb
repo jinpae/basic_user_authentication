@@ -76,4 +76,22 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+	# Instead of checking in secrets.yml to source control, do the following workaround.
+	config.secret_key_base = ENV["SECRET_KEY_BASE"]
+
+	# Mailer configuration.
+	config.action_mailer.default_url_options = { host: "secret-headland-7231.herokuapp.com" }
+
+	config.action_mailer.delivery_method = :smtp
+
+	config.action_mailer.smtp_settings = {
+		address: "smtp.gmail.com",
+		port: 587,
+		domain: "example.com",
+		authentication: "plain",
+		enable_starttls_auto: true,
+		user_name: Rails.application.secrets.gmail_username,
+		password: Rails.application.secrets.gmail_password
+	}
 end
