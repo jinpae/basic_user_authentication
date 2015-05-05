@@ -81,7 +81,7 @@ Rails.application.configure do
 	config.secret_key_base = ENV["SECRET_KEY_BASE"]
 
 	# Mailer configuration.
-	config.action_mailer.default_url_options = { host: "secret-headland-7231.herokuapp.com" }
+	config.action_mailer.default_url_options = { host: "https://secret-headland-7231.herokuapp.com" }
 
 	config.action_mailer.delivery_method = :smtp
 
