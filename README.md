@@ -1,7 +1,7 @@
 ## Basic User Authentication with Bcrypt
 This is a Ruby on Rails 4.2 application that provides and demonstrates simple user authentication.
 
-In order to review and solidify my foundation on how the general authentication process works and is implemented in Rails, I decided not to use any authentication related gems such as [Devise](https://github.com/plataformatec/devise) and [Authlogic](https://github.com/binarylogic/authlogic), but pretty much build it from scracth just using bcrypt for encrypting user passwords.
+In order to review and solidify my foundation on how the general authentication process works and is implemented in Rails, I decided not to use any authentication related gems such as [Devise](https://github.com/plataformatec/devise) and [Authlogic](https://github.com/binarylogic/authlogic), but pretty much build it from scratch just using bcrypt for encrypting user passwords.
 
 Check out the [live demo](https://secret-headland-7231.herokuapp.com/)
 
