@@ -50,7 +50,7 @@ If you would like to run the app locally on your machine, follow the steps below
   
   Change above section accordingly to reflect your needs. You might want to update your `secrets.yml` file as well.
   
-  ## License
-  MIT Lecense
-  
-  Copyright &copy;2015 Jin Pae
+## License
+MIT Lecense
+
+Copyright &copy;2015 Jin Pae
