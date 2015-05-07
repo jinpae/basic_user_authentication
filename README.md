@@ -39,12 +39,12 @@ If you would like to run the app locally on your machine, follow the steps below
   ```
   config.action_mailer.smtp_settings = {
     port: '587',
-	  address: 'smtp.mandrillapp.com',
-	  user_name: Rails.application.secrets.mandrill_username,
-	  password: Rails.application.secrets.mandrill_apikey,
-	  domain: 'example.com',
-	  authentication: :plain,
-	  enable_starttls_auto: true
+    address: 'smtp.mandrillapp.com',
+    user_name: Rails.application.secrets.mandrill_username,
+    password: Rails.application.secrets.mandrill_apikey,
+    domain: 'example.com',
+    authentication: :plain,
+    enable_starttls_auto: true
   }
   ```
   
